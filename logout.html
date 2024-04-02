@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 880px;
+  margin: auto;
+  background-image: url("backimg1.jpg");
+  height: 700px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/*.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}*/
+.main{ margin-top:0px;}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn {
+  border-radius: 50px;
+  background-color: linear-gradient(to bottom right, #006666 20%, #ffffff 73%);
+  border: none;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer; margin-top:10px;
+}
+a{style: none; color:#000;text-decoration: none;}
+</style>
+</head>
+<body>
+<center>
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">BANKING SYSTEM</a>
+  <div id="myLinks">
+    <a href="balance.html">BALANCE CHECK</a>
+    <a href="withdraw.html">WITHDRAW</a>
+    <a href="deposit.html">DEPOSIT</a>
+    <a href="pas.html">PASSBOOK</a>
+	<a href="close.html">CLOSE ACCOUNT</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <p>&#9776;</p>
+  </a>
+</div>
+
+<div style="padding-left:0px" class="main">
+  <h1>CHECK YOUR BALANCE HERE</h1>
+</div>
+<table>
+<form action="http://localhost/PROJECT/logout.php" method="POST">
+<tr>
+<td><input type="submit"  value="logout"></td>
+</tr>
+</table>
+</form>
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</center>
+</body>
+</html>

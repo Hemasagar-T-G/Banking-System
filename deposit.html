@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 880px;
+  margin: auto;
+  background-image: url("backimg1.jpg");
+  height: 700px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+input[type=text]{
+	background: transparent;
+	width: 80px;
+	height: 25px;
+	border: none;
+	border-bottom: 2px solid black;
+	
+}
+input[type=text]:focus{
+	background:none;
+	color: white;
+	outline: none;
+	width: 80px;
+	height: 25px;
+	border: none;
+	border-bottom: 2px solid black;
+	}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn {
+  background-color: blue;
+  border: none;
+  color:#fff;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top:10px;
+}
+.btn1 {
+  background-color:red;
+  border: none;
+  color:#fff;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top:10px;
+}
+td{
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+a{style: none; color:#000;text-decoration: none;}
+.main{ border-radius: 10px;
+margin-top: 40px;
+		padding: 10px;
+		width: 80%;
+		background: #5c62a39e;
+}
+</style>
+</head>
+<body>
+<form action="http://localhost/PROJECT/deposit.php" method="POST">
+<center>
+<div class="mobile-container">
+<div class="topnav">
+  <a href="welcome.html" class="active">BANKING SYSTEM</a>
+</div>
+
+<div style="padding-left:0px" class="main">
+  <h1>DEPOSIT YOUR AMOUNT HERE:</h1>
+  <form action="" method="">
+<table>
+  <tr>
+  <td>Enter amount to deposit:</td><td><input type="text" pattern="[0-9]{3,8}" name="amount" required>
+  <input type="submit" value="DEPOSIT" class="btn">
+  <input type="RESET" value="RESET" class="btn">
+</td>
+  </tr>
+  <tr>
+    <td>WITHDRAW:</td><td><a href="withdraw.html"><input type="button" value="WITHDRAW" name="bal" class="btn"></a></td>
+   </tr>
+   <tr>
+	 <td>BALANCE CHECK:</td><td><a href="balance.php"><input type="button" value="BALANCE CHECK" name="bal" class="btn"></a></td>
+	 </tr>
+	 <tr>
+	 <td>PASSBOOK:</td><td><a href="pas.php"><input type="button" value="PASSBOOK" name="bal" class="btn"></a></td>
+	 </tr>
+	 <tr>
+		<td>CLOSE-ACCOUNT:</td><td><a href="close.php"><input type="button" value="CLOSE-ACCOUNT" name="bal" class="btn1"></a></td>
+		</tr>
+		<tr>
+		<td>LOG-OUT</td><td><a href="logout.php"><input type="button" value="LOG-OUT" name="bal" class="btn"></a></td>
+		</tr>
+		<tr>
+		<td rowspan="2"><button onclick="goBack()" class="btn">&#8249;  BACK</button></td>
+		</tr>
+		
+	</table>
+
+</form></center>
+</div>
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</center>
+</form>
+</body>
+</html>

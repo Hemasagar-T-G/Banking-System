@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { User-select:none;
+color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 880px;
+  margin: auto;
+  background-image: url("backimg1.jpg");
+  height: 700px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #4CAF50;
+  position: relative;
+}
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.active {
+  color: white;
+}
+.button {
+  border-radius: 0px;
+  background-color: blue;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 0px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer; margin-top:10px;
+}
+input[type=text], [type=password], [type=email], [type=date]{
+	background: transparent;
+	width: 305px;
+	height: 25px;
+	border: none;
+	border-bottom: 2px solid black;
+	
+}
+input[type=text], [type=password], [type=email], [type=date]:focus{
+	background:none;
+	outline: none;
+	width: 305px;
+	height: 25px;
+	border: none;
+	border-bottom: 2px solid black;
+	}
+textarea{background: transparent;border: 1px solid black;border: none;
+	border-bottom: 2px solid black;}
+input[type=submit]{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+table {border-collapse:collapse;}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  width: 15px; height: 15px;
+}
+.round{
+  border-radius: 50%;
+}
+in_login{
+width:300px;
+height:20px;
+background:transparent;
+border: 1px solid black;}
+.back{
+margin-left:5px;	
+color: white;
+text-decoration: none;
+background-color: blue;
+border: 1px blue;
+}
+.main{ border-radius: 15px 50px 30px;
+margin-top: 10%;
+		padding: 10px;
+		width: 80%;
+		background: #5c62a39e;
+}
+</style>
+</head>
+<body>
+<center>
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+<div class="topnav">
+  <a href="welcome.html" class="active">BANKING SYSTEM</a>
+</div>
+<div style="padding-left:0px" class="main">
+  <h2>REGISTER HERE</h2>
+  <h4>Already have an account<a href="login.html"> log-in</a> </h4>
+  <form action="http://localhost/project/reg.php" method="POST">
+    <table>
+	<tr>
+	<td>USER NAME:</td> <td><input type="text" name="user" pattern="[A-Za-z]{5,}" required></td></tr>
+	<tr><td>PASSWORD:</td><td><input type="password" name="pwd" maxlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" required></td></tr>
+	<tr><td>AADHAR NO:</td><td><input type="text" name="aad" pattern="(?=.*\d).{4}-(?=.*\d).{4}-(?=.*\d).{4}" required></td></tr>
+	<tr><td>PHONE NO:</td><td><input type="text" name="phone" pattern="[0-9]{10}" required></td></tr>
+	<tr><td>GENDER:</td>
+	  <td><input type="radio" id="male" name="gender" value="male">
+	  <label for="male">MALE</label>
+	  <input type="radio" id="female" name="gender" value="female">
+	  <label for="female">FEMALE</label>
+	  <input type="radio" id="other" name="gender" value="other">
+	  <label for="other">OTHERS</label></td></tr>
+	<tr><td>EMAIL:</td><td><input type="email" name="email" required></td></tr>
+	<tr><td>DOB</td><td><input type="date" name="dob" required></td></tr>
+	<tr><td VALIGN=TOP>ADDRESS:</td><td><textarea name="add" rows="6" cols="40" required></textarea></td></tr>
+    <tr><td colspan="2"><input type="submit" class="button" value="SUBMIT">
+	<input type="reset" class="button" value="RESET">
+	<a href="http://localhost/PROJECT/welcome.html"><input type="button" value="&#8249;BACK" class="button"></a>
+	<!--<button onclick="goBack()" class="button">&#8249;  BACK</button>--></tr>
+	</table>
+  </form>
+</div>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</center>
+</body>
+</html>
